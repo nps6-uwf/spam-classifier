@@ -1,0 +1,72 @@
+#figure-1{
+    height:80vh; width:50vw;
+    overflow:scroll;
+    white-space:nowrap;
+}
+.main-row{
+    display: inline-block;
+    float: left;
+    width: 100vw;
+}    
+.main-col{
+    width: 50vw;
+    display: inline-block;
+    float: left;
+}
+.inner-col{
+    width: 50%;
+    display: inline-block;
+    float: left; 
+}
+.inner-col-r{
+    width: 30%;
+
+}
+.inner-col-l{
+    width: 70%;
+}
+
+.inner-col-r-model{
+    width: 50%;
+
+}
+.inner-col-r-model table{
+    width: 50%;
+
+}
+.inner-col-l-model{
+    width: 50%;
+}
+#inner-row-r-1 {
+    margin-left: 10%;
+    width: 80%;
+    height: 90vh;
+}
+#inner-row-r-2 {
+    height: 60vh;   
+}
+#spam-detector{
+    margin-top: 100px;
+    width: 100%;
+    height: 100%;
+}
+#spam-detector > div > textarea{
+    width: 80%;
+    margin-left: 10%;
+}
+#classify-btn {
+    margin: auto;
+    background: lightgreen;
+    text-align: center;
+    width: 40%;
+    height: 15%;
+    line-height: 9vh;
+    font-weight: bold;
+}
+#classify-btn:hover {
+    background: lightseagreen;
+    cursor: pointer;
+}
+input {
+    margin-left: 5px;
+}

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>perceptron js</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Chart.js CDN -->
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <script src="spam_data.js"></script>
+    <script src="perceptron.js"></script>
+</head>
+<body>
+    <div class="main-row">
+        <h2>Spam Classifier</h2>
+    </div>
+    <div class="main-row">
+        <div class="main-col col-l">
+            <div id="figure1">
+            </div>
+        </div>
+        <div class="main-col col-r">
+            <div id="inner-row-r-1" class="inner-row">
+                    <fieldset>
+                        <h5>Data & features</h5>  
+                        <div class="inner-col inner-col-l">
+                            <div>
+                                <select name="weight-vector-init" id="data-select">
+                                    <option value="1">Artificial Dataset (N = 31)</option>
+                                    <option value="2">Real Dataset (N = 5572)</option>
+                                </select>
+                                <br>
+                                <input class="feature" type="checkbox" id="feature1" name="feature1" value="1" checked>
+                                <label for="feature1"> Number of words with capitals</label><br>
+                                <input class="feature" type="checkbox" id="feature2" name="feature2" value="2" checked>
+                                <label for="feature2"> Number of words with number and letter</label><br>
+                                <input class="feature" type="checkbox" id="feature3" name="feature3" value="3">
+                                <label for="feature3"> Number of spam words</label><br>
+                                <input class="feature" type="checkbox" id="feature4" name="feature4" value="4">
+                                <label for="feature3"> Mean word length</label><br>
+                            </div>
+                            <div>
+                                <label for="">Percentage of dataset:</label><input id="data-pct" type="text" value = 1>
+                                <br>
+                                <button id="gen-sample">Generate new sample</button>
+                            </div>
+                            <br>
+                            <h5>Model</h5>  
+                        </div>
+                        <div class="inner-col inner-col-r">
+                            <table>
+                                <tbody>
+                                    <tr>
+                                        <td>Dataset size</td><td id="data-size"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Sample size</td><td id="sample-size"></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <button id="toggle-dataset">Show Data Table</button>
+
+                        </div>
+                      
+                        <div class="inner-col inner-col-l-model">
+
+                            <label for="weight-vector-init"> Weight vector initialization </label>
+                            <select name="weight-vector-init" id="weight-vector-init">
+                                <option value="1">Zeroes</option>
+                                <option value="2">Random</option>
+                            </select>
+                            <br>
+                            <label for="">Max Iterations:</label><input id="max-iterations" type="text" value = 1000>
+                            <br>
+                            <label for="">Learning rate:</label><input id="learn-rate" type="text" value = 1>
+                            <br>
+                            <label for="">Allowed error:</label><input id="allowed-error" type="text" value = 1>
+                            <br>
+                            <button id="start-learning">Start Learning</button>
+                        </div>
+                        <div class="inner-col inner-col-r-model">
+                            <table>
+                                <tbody>
+                                    <tr>
+                                        <td>Weight Vector</td><td id="perceptron-weights"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Error </td><td id="perceptron-error"></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <br>
+                        <div id="spam-detector">
+                            <div>
+                                <textarea name="" id="" cols="30" rows="10" placeholder="start typing to detect spam!"></textarea>
+                            </div>
+                            <div id="classify-btn">
+                                Classify
+                            </div>
+                        </div>
+                    </fieldset>
+            </div>    
+        </div>
+    </div>
+</body>
+</html>   
